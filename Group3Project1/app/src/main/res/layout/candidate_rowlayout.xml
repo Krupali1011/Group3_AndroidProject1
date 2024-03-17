@@ -12,7 +12,20 @@
 
         android:layout_height="275dp"
         android:background="#2B2B2B">
-        
+
+
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/LinerLayout"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="352dp"-->
+        <!--            android:layout_marginTop="2dp"-->
+        <!--            android:layout_marginBottom="2dp"-->
+        <!--            android:orientation="horizontal">-->
+
+
+
+        <!--        </LinearLayout>-->
 
 
         <ImageView
@@ -63,13 +76,13 @@
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/ViewMore"
+            android:id="@+id/btnViewDetails"
             android:layout_width="199dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:layout_marginTop="130dp"
             android:backgroundTint="@color/black"
-            android:text="View More Details"
+            android:text="View Details"
             android:textColor="@color/white"
             android:textSize="20sp" />
 
