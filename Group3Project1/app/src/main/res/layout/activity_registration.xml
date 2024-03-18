@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,46 +13,45 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical" >
 
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="67dp"
                 android:background="@color/black"
                 android:paddingHorizontal="10dp">
 
 
+                <ImageView
+                    android:id="@+id/backbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="17dp"
+
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/left_arrow_white"
+
+                    />
+
                 <TextView
                     android:id="@+id/cartTitle"
-                    android:layout_width="178dp"
-                    android:layout_height="49dp"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="56dp"
-                    android:text="Registration"
-                    android:textSize="28sp"
+                    android:layout_width="211dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="90dp"
+                    android:text="REGISTRATION"
+                    android:textSize="25sp"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
 
-                <ImageView
-                    android:id="@+id/backbutton"
-                    android:layout_width="45dp"
-                    android:layout_height="61dp"
-                    android:layout_marginStart="1dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="3dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/cartTitle"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cartTitle"
-                    app:layout_constraintVertical_bias="1.0" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
 
 
             <EditText
@@ -60,13 +59,14 @@
                 android:layout_width="362dp"
                 android:layout_height="52dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/text_border"
                 android:ems="10"
                 android:hint="Enter your Email ID"
                 android:inputType="text"
                 android:text=""
-                android:layout_margin="20dp"
+
                 android:textAlignment="center"
                 android:textSize="20dp" />
 
@@ -162,9 +162,9 @@
             <Button
                 android:id="@+id/buttonReg"
                 android:layout_width="276dp"
-                android:layout_height="72dp"
+                android:layout_height="65dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="35dp"
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/black"
                 android:text="@string/Register"
@@ -177,4 +177,4 @@
         </LinearLayout>
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
