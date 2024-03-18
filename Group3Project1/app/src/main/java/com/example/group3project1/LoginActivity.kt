@@ -6,6 +6,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.Toast
 import com.example.group3project1.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -24,6 +25,14 @@ class LoginActivity : AppCompatActivity() {
        // Initialize Firebase authentication
         firebaseAuth = FirebaseAuth.getInstance()
 
+        val btnBack :ImageView = findViewById(R.id.btnBack)
+        //SetOnClick Listener for back button
+
+        btnBack.setOnClickListener{v->
+            val intent = Intent(v.context,IntroActivity::class.java)
+            v.context.startActivity(intent)
+        }
+
         //User moves to Registration page when click on create Account Button
         binding.createAccount.setOnClickListener {
             val intent = Intent(this, RegistrationActivity::class.java)
@@ -34,6 +43,8 @@ class LoginActivity : AppCompatActivity() {
             // created val for email, password, and forget password
             val email = binding.loginEmailId.text.toString()
             val password = binding.loginPassword.text.toString()
+
+
 
            // Verify that  if email and password fields are not empty or not
             if (email.isNotEmpty() && password.isNotEmpty()) {
