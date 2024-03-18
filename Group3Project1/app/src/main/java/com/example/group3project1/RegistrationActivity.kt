@@ -4,6 +4,7 @@ import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.group3project1.databinding.ActivityRegistrationBinding
@@ -23,6 +24,14 @@ class RegistrationActivity : AppCompatActivity() {
         setContentView(binding.root)
 // Initialize Firebase authentication
         firebaseAuth = FirebaseAuth.getInstance()
+        val backbutton : ImageView = findViewById(R.id.backbutton)
+
+        backbutton.setOnClickListener{v->
+            val intent = Intent(v.context,IntroActivity::class.java)
+
+            v.context.startActivity(intent)
+
+        }
 
         // SetOnclick listener for the Registration button
         binding.buttonReg.setOnClickListener{
