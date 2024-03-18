@@ -1,18 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:layout_gravity="center"
     tools:context=".IntroActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
 
 
     <ImageView
         android:id="@+id/logoimageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="391dp"
+        android:layout_height="411dp"
         android:background="#000000"
+
         app:srcCompat="@drawable/borcelle" />
 
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="226dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/white"
+        android:padding="20dp"
+        android:text="LOGIN"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/registernowbutton"
+        android:layout_width="match_parent"
+        android:layout_height="149dp"
+        android:backgroundTint="@color/transparent"
+        android:text="NO ACCOUNT? REGISTER NOW"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>
+</ScrollView>
