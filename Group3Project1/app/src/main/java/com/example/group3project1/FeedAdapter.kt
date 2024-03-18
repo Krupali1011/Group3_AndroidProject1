@@ -1,6 +1,7 @@
 package com.example.group3project1
 
 import android.content.Intent
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Button
@@ -25,10 +26,10 @@ class FeedAdapter(private val feedList: ArrayList<Feed>):RecyclerView.Adapter<Fe
         holder.title.text = item.Title
         holder.description.text = item.Description
 
-        holder.candidatesBtn.setOnClickListener{v ->
-            val intent = Intent(v.context,CandidateActivity::class.java)
-            v.context.startActivity(intent)
+        holder.btnlike.setOnClickListener{
 
+           holder.btnlike.setBackgroundColor(Color.GREEN)
+            holder.btnlike.text="Liked"
         }
 
     }
@@ -38,7 +39,8 @@ class FeedAdapter(private val feedList: ArrayList<Feed>):RecyclerView.Adapter<Fe
         val candidateProfile: ImageView = itemView.findViewById(R.id.candidate_profile)
         val feedImg: ImageView = itemView.findViewById(R.id.feed_img)
         val description: TextView = itemView.findViewById(R.id.description)
-        val candidatesBtn: Button = itemView.findViewById(R.id.candidatesBtn)
+        val btnlike:Button=itemView.findViewById(R.id.LikeBtn)
+
 
     }
     override fun getItemCount(): Int {
