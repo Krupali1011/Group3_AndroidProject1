@@ -6,5 +6,7 @@ data class Candidate(
     var Title: String = "",
     var Company: String = "",
     var Image: String = "",
-    var Address: String = ""
+    var Address: String = "",
+    var About: String = "",
+    var Id: String = ""
 )
