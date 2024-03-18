@@ -1,7 +1,9 @@
 /* @Author -Jojina Thomas */
 package com.example.group3project1
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.DataSnapshot
@@ -19,8 +21,8 @@ class CandidateActivity : AppCompatActivity() {
     private lateinit var  candidaterecyclerview :RecyclerView
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_candidate)
 
@@ -35,7 +37,20 @@ class CandidateActivity : AppCompatActivity() {
         // Fetch candidate data from Firebase
         getCandidateData()
 
+        val backbutton : ImageView = findViewById(R.id.backbutton)
+
+        backbutton.setOnClickListener{v->
+            val intent = Intent(v.context,MainActivity::class.java)
+
+            v.context.startActivity(intent)
+
+        }
+
     }
+
+
+
+
 
     private fun getCandidateData() {
         // Get a reference to the Candidate
@@ -60,6 +75,9 @@ class CandidateActivity : AppCompatActivity() {
    }
 
             }
+
+
+
             //Handle any errors that occur during data retrieval
             override fun onCancelled(error: DatabaseError) {
 
