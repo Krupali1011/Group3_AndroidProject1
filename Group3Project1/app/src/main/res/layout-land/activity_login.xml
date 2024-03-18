@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="330dp"
+        android:src="@drawable/left_arrow_white"/>
+
+
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="141dp"
+        android:layout_height="108dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="@string/login" />
+
+    <EditText
+        android:id="@+id/login_email_id"
+        android:layout_width="381dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/loginText"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/border"
+        android:hint="@string/Email"
+        android:inputType="textEmailAddress"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="386dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/login_email_id"
+        android:background="@drawable/border"
+        android:textColorHint="@color/white"
+        android:hint="password"
+        android:textColor="@color/white"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/white"
+        android:padding="20dp"
+        android:text="LOGIN"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/createAccount"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="Create Account?"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:textStyle="italic" />
+    </LinearLayout>
+
+
+
+</ScrollView>
