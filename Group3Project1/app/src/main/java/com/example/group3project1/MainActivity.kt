@@ -1,8 +1,10 @@
 package com.example.group3project1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.DataSnapshot
@@ -25,6 +27,13 @@ class MainActivity : AppCompatActivity() {
         feedRecyclerview =findViewById(R.id.feed_recyclerview)
         feedRecyclerview.layoutManager = LinearLayoutManager(this)
         FeedArrayList = arrayListOf<Feed>()
+
+        val candidatesBtn : Button = findViewById(R.id.candidatesBtn)
+        candidatesBtn.setOnClickListener{v->
+            val intent = Intent(v.context,CandidateActivity::class.java)
+            v.context.startActivity(intent)
+
+        }
 
         getFeedData()
 
