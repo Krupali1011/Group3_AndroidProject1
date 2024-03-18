@@ -1,9 +1,11 @@
 
 package com.example.group3project1
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -32,6 +34,21 @@ class MyAdapter(private val candidatelist : ArrayList<Candidate>): RecyclerView.
         holder.Title.text=item.Title
         holder.Company.text=item.Company
         holder.Address.text=item.Address
+
+      //Using Intent to pass data to details view
+      holder.btnViewDetails.setOnClickListener { v ->
+          val id: String = item.Id
+          val intent = Intent(v.context,CandidateDetailsActivity::class.java)
+
+          intent.putExtra("NAME", item.Name)
+          intent.putExtra("TITLE", item.Title)
+          intent.putExtra("COMPANY", item.Company)
+          intent.putExtra("ADDRESS", item.Address)
+          intent.putExtra("ABOUT", item.About)
+          intent.putExtra("IMAGE", item.Image)
+          intent.putExtra("ID", id)
+          v.context.startActivity(intent)
+      }
     }
 
     // ViewHolder class to hold references to the views in each item
@@ -42,6 +59,7 @@ class MyAdapter(private val candidatelist : ArrayList<Candidate>): RecyclerView.
         val Company:TextView = itemView.findViewById(R.id.Companyname)
         val Image: ImageView = itemView.findViewById(R.id.UserImage)
         val Address:TextView =itemView.findViewById(R.id.Address)
+        val btnViewDetails : Button = itemView.findViewById(R.id.btnViewDetails)
 
     }
 
